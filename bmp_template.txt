@@ -1,0 +1,37 @@
+uint32_t : {
+    _:int<L,u,4>
+}
+uint16_t : {
+    _:int<L,u,2>
+}
+
+BmpFileHeader : {
+    Signature:char[2]
+    FileSize:uint32_t
+    Reserved1:uint16_t
+    Reserved2:uint16_t
+    OffsetToPixels:uint32_t
+}
+
+DibHeader : {
+    DibHeaderSize:uint32_t
+    ImageWidth:uint32_t
+    ImageHeight:uint32_t
+    Planes:uint16_t
+    BitsPerPixel:uint16_t
+    Compression:uint32_t
+    ImageSize:uint32_t
+    Xppm:uint32_t
+    Yppm:uint32_t
+    ColorsInColorTable:uint32_t
+    ImportantColorCount:uint32_t
+}
+file_header : BmpFileHeader
+dib_header : DibHeader
+Pixel : {
+    B:hex
+    G:hex
+    R:hex
+}
+## real data
+#Pixels:Pixel[5]

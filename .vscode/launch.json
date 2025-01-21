@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "HexParser",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "Main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--input_filepath", "test.bmp",
+                "--template_filepath", "bmp_template.txt",
+                "--output_filepath", "output.txt"
+            ]
+        }
+    ]
+}
