@@ -126,7 +126,7 @@ class HexParser:
             return
         var_indent = indent
         if len(var.name) > 0:
-            if var.name != "_":
+            if var.name != "_" and var.core_type != "comment":
                 var_indent = indent + 1
                 self.PrintOut(self.Indent(indent) + var.name + ":\n")
         for v in var.fields.values():
